@@ -1,0 +1,86 @@
+file_read fileName ../../gen/inputs/case06.00.input
+file_read messagesInFile true
+file_read opcode 0
+file_read messageSize 0
+file_read granularity 1
+file_read repeat false
+file_read bytesRead 2048
+file_read messagesWritten 1
+file_read suppressEOF false
+file_read badMessage false
+file_read ocpi_debug false
+file_read ocpi_endian little
+file_read ocpi_version 2
+file_read ocpi_max_opcode_out 255
+file_read ocpi_max_bytes_out 65532
+file_read ocpi_buffer_size_out 2048
+cacfar_ms_input enable_give_lsfr true
+cacfar_ms_input enable_take_lsfr true
+cacfar_ms_input give_duty 1
+cacfar_ms_input take_duty 1
+cacfar_ms_input mode full
+cacfar_ms_input seed 1
+cacfar_ms_input allow_zlms false
+cacfar_ms_input insert_nop true
+cacfar_ms_input ocpi_debug false
+cacfar_ms_input ocpi_endian little
+cacfar_ms_input ocpi_version 2
+cacfar_ms_input DATA_WIDTH_p 32
+cacfar_ms_input ocpi_max_opcode_in 255
+cacfar_ms_input ocpi_max_bytes_in 65532
+cacfar_ms_input ocpi_max_opcode_out 255
+cacfar_ms_input ocpi_max_bytes_out 65532
+cacfar_ms_input ocpi_buffer_size_out 8192
+cacfar_ms_input ocpi_blocked_out 
+cacfar_ms_input ocpi_max_latency_out 256
+cacfar_ms_input ocpi_latency_out 1
+cacfar_ms_input ocpi_messages_out 
+cacfar_ms_input ocpi_bytes_out 
+cacfar SAMPLE_SIZE 512
+cacfar SAMPLING_FREQUENCY 1024
+cacfar NUM_TRAIN_CELLS 12
+cacfar NUM_GUARD_CELLS 4
+cacfar THRESHOLD_FACTOR 5
+cacfar ocpi_debug false
+cacfar ocpi_endian little
+cacfar ocpi_version 2
+cacfar ocpi_max_opcode_input 0
+cacfar ocpi_max_bytes_input 8192
+cacfar ocpi_max_opcode_output 0
+cacfar ocpi_max_bytes_output 8192
+cacfar ocpi_buffer_size_output 8192
+cacfar ocpi_blocked_output 
+cacfar ocpi_max_latency_output 256
+cacfar ocpi_latency_output 256
+cacfar ocpi_messages_output 
+cacfar ocpi_bytes_output 
+bp enable_select true
+bp enable_duty_cycle 1
+bp ocpi_debug false
+bp ocpi_endian little
+bp ocpi_version 2
+bp IDATA_WIDTH_p 32
+bp ODATA_WIDTH_p 32
+bp ocpi_max_opcode_in 255
+bp ocpi_max_bytes_in 65532
+bp ocpi_max_opcode_out 255
+bp ocpi_max_bytes_out 65532
+bp ocpi_buffer_size_out 8192
+bp ocpi_blocked_out 
+bp ocpi_max_latency_out 256
+bp ocpi_latency_out 0
+bp ocpi_messages_out 
+bp ocpi_bytes_out 
+file_write fileName case06.00.cacfar.hdl.output.out
+file_write messagesInFile false
+file_write bytesWritten 2048
+file_write messagesWritten 2
+file_write stopOnEOF true
+file_write ocpi_debug false
+file_write ocpi_endian little
+file_write ocpi_version 2
+file_write suppressWrites false
+file_write countData false
+file_write bytesPerSecond 2531207
+file_write ocpi_max_opcode_in 255
+file_write ocpi_max_bytes_in 65532

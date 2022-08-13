@@ -1,0 +1,157 @@
+OCPI_LIBRARY_PATH=../../../lib/rcc:../../../lib/ocl:../../gen/assemblies:$OCPI_CDK_DIR/$OCPI_TOOL_DIR/artifacts:$OCPI_CDK_DIR/$platform/artifacts $OCPI_CDK_DIR/$OCPI_TOOL_DIR/bin/ocpirun -d -v -H -mcacfar=hdl -wcacfar=cacfar -Pcacfar=xsim --sim-dir=case04.00.cacfar.hdl.simulation --timeout=3600 --dump-file=case04.00.cacfar.hdl.props -pfile_write=fileName=case04.00.cacfar.hdl.output.out ../../gen/applications/case04.00.xml
+Warning: could not find a Xilinx license file, which is OK for a WebPack installation.
+Simulation HDL device lsim:xsim for xsim (UUID 428aee3e-f301-11ec-90a2-2b5b01cdede8, dir case04.00.cacfar.hdl.simulation/xsim.xsim.14017.0, ticks 200000000)
+Available containers are:  0: lsim:xsim [model: hdl os:  platform: xsim], 1: rcc0 [model: rcc os: linux platform: centos7]
+Actual deployment is:
+  Instance  0 file_read (spec ocpi.core.file_read) on rcc container 1: rcc0, using file_read in /home/opencpi/opencpi/cdk/centos7/artifacts/ocpi.core.file_read.rcc.0.centos7.so dated Tue Oct  5 12:37:56 2021
+  Instance  1 cacfar_ms_input (spec ocpi.core.metadata_stressor) on hdl container 0: lsim:xsim, using metadata_stressor/a/cacfar_ms_input in ../../gen/assemblies/cacfar_0_0/container-cacfar_0_0_xsim_base/target-xsim/cacfar_0_0_xsim_base.bitz dated Thu Jun 23 15:29:58 2022
+  Instance  2 cacfar (spec local.cacfar.cacfar) on hdl container 0: lsim:xsim, using cacfar/a/uut_cacfar in ../../gen/assemblies/cacfar_0_0/container-cacfar_0_0_xsim_base/target-xsim/cacfar_0_0_xsim_base.bitz dated Thu Jun 23 15:29:58 2022
+  Instance  3 bp (spec ocpi.core.backpressure) on hdl container 0: lsim:xsim, using backpressure/a/cacfar_backpressure_output in ../../gen/assemblies/cacfar_0_0/container-cacfar_0_0_xsim_base/target-xsim/cacfar_0_0_xsim_base.bitz dated Thu Jun 23 15:29:58 2022
+  Instance  4 file_write (spec ocpi.core.file_write) on rcc container 1: rcc0, using file_write in /home/opencpi/opencpi/cdk/centos7/artifacts/ocpi.core.file_write.rcc.0.centos7.so dated Tue Oct  5 12:37:59 2021
+Application XML parsed and deployments (containers and artifacts) chosen [5 s 461 ms]
+Initializing xsim simulator from executable/bitstream: ../../gen/assemblies/cacfar_0_0/container-cacfar_0_0_xsim_base/target-xsim/cacfar_0_0_xsim_base.bitz
+Executable/bitstream is installed and ready, in directory case04.00.cacfar.hdl.simulation/cacfar_0_0.xsim.20220623153207.
+Starting execution of simulator for HDL assembly: cacfar_0_0 (executable "../../gen/assemblies/cacfar_0_0/container-cacfar_0_0_xsim_base/target-xsim/cacfar_0_0_xsim_base.bitz", dir "case04.00.cacfar.hdl.simulation/cacfar_0_0.xsim.20220623153207" pwd "/home/opencpi/opencpi/projects/cacfar/components/cacfar.test/run/xsim").
+Simulator process (process id 14190) started, with its output in case04.00.cacfar.hdl.simulation/cacfar_0_0.xsim.20220623153207/sim.out
+Simulator process is running.
+Application established: containers, workers, connections all created [7 s 155 ms]
+Dump of all initial property values:
+Property   0: file_read.fileName = "../../gen/inputs/case04.00.input" (cached)
+Property   1: file_read.messagesInFile = "true" (cached)
+Property   2: file_read.opcode = "0" (cached)
+Property   3: file_read.messageSize = "0"
+Property   4: file_read.granularity = "1" (cached)
+Property   5: file_read.repeat = "false"
+Property   6: file_read.bytesRead = "0"
+Property   7: file_read.messagesWritten = "0"
+Property   8: file_read.suppressEOF = "false"
+Property   9: file_read.badMessage = "false"
+Property  10: file_read.ocpi_debug = "false" (parameter, hidden, worker)
+Property  11: file_read.ocpi_endian = "little" (parameter, hidden, worker)
+Property  12: file_read.ocpi_version = "2" (parameter, hidden, worker)
+Property  13: file_read.ocpi_max_opcode_out = "255" (parameter, hidden, worker)
+Property  14: file_read.ocpi_max_bytes_out = "65532" (parameter, hidden, worker)
+Property  15: file_read.ocpi_buffer_size_out = "2048" (cached, hidden, worker)
+Property  16: cacfar_ms_input.enable_give_lsfr = "true" (cached)
+Property  17: cacfar_ms_input.enable_take_lsfr = "true" (cached)
+Property  18: cacfar_ms_input.give_duty = "1" (cached)
+Property  19: cacfar_ms_input.take_duty = "1" (cached)
+Property  20: cacfar_ms_input.mode = "full" (cached)
+Property  21: cacfar_ms_input.seed = "1" (cached)
+Property  22: cacfar_ms_input.allow_zlms = "false" (cached)
+Property  23: cacfar_ms_input.insert_nop = "true" (cached)
+Property  24: cacfar_ms_input.ocpi_debug = "false" (parameter, hidden, worker)
+Property  25: cacfar_ms_input.ocpi_endian = "little" (parameter, hidden, worker)
+Property  26: cacfar_ms_input.ocpi_version = "2" (parameter, hidden, worker)
+Property  27: cacfar_ms_input.DATA_WIDTH_p = "32" (parameter)
+Property  28: cacfar_ms_input.ocpi_max_opcode_in = "255" (parameter, hidden, worker)
+Property  29: cacfar_ms_input.ocpi_max_bytes_in = "65532" (parameter, hidden, worker)
+Property  30: cacfar_ms_input.ocpi_max_opcode_out = "255" (parameter, hidden, worker)
+Property  31: cacfar_ms_input.ocpi_max_bytes_out = "65532" (parameter, hidden, worker)
+Property  32: cacfar_ms_input.ocpi_buffer_size_out = "8192" (cached, hidden, worker)
+Property  33: cacfar_ms_input.ocpi_blocked_out = "" (debug, hidden, worker, unreadable)
+Property  34: cacfar_ms_input.ocpi_max_latency_out = "256" (parameter, hidden, worker)
+Property  35: cacfar_ms_input.ocpi_latency_out = "0" (hidden, worker)
+Property  36: cacfar_ms_input.ocpi_messages_out = "" (debug, hidden, worker, unreadable)
+Property  37: cacfar_ms_input.ocpi_bytes_out = "" (debug, hidden, worker, unreadable)
+Property  38: cacfar.SAMPLE_SIZE = "512" (parameter)
+Property  39: cacfar.SAMPLING_FREQUENCY = "1024" (parameter)
+Property  40: cacfar.NUM_TRAIN_CELLS = "12" (parameter)
+Property  41: cacfar.NUM_GUARD_CELLS = "4" (parameter)
+Property  42: cacfar.THRESHOLD_FACTOR = "5" (parameter)
+Property  43: cacfar.ocpi_debug = "false" (parameter, hidden, worker)
+Property  44: cacfar.ocpi_endian = "little" (parameter, hidden, worker)
+Property  45: cacfar.ocpi_version = "2" (parameter, hidden, worker)
+Property  46: cacfar.ocpi_max_opcode_input = "0" (parameter, hidden, worker)
+Property  47: cacfar.ocpi_max_bytes_input = "8192" (parameter, hidden, worker)
+Property  48: cacfar.ocpi_max_opcode_output = "0" (parameter, hidden, worker)
+Property  49: cacfar.ocpi_max_bytes_output = "8192" (parameter, hidden, worker)
+Property  50: cacfar.ocpi_buffer_size_output = "8192" (cached, hidden, worker)
+Property  51: cacfar.ocpi_blocked_output = "" (debug, hidden, worker, unreadable)
+Property  52: cacfar.ocpi_max_latency_output = "256" (parameter, hidden, worker)
+Property  53: cacfar.ocpi_latency_output = "0" (hidden, worker)
+Property  54: cacfar.ocpi_messages_output = "" (debug, hidden, worker, unreadable)
+Property  55: cacfar.ocpi_bytes_output = "" (debug, hidden, worker, unreadable)
+Property  56: bp.enable_select = "true" (cached)
+Property  57: bp.enable_duty_cycle = "1" (cached)
+Property  58: bp.ocpi_debug = "false" (parameter, hidden, worker)
+Property  59: bp.ocpi_endian = "little" (parameter, hidden, worker)
+Property  60: bp.ocpi_version = "2" (parameter, hidden, worker)
+Property  61: bp.IDATA_WIDTH_p = "32" (parameter)
+Property  62: bp.ODATA_WIDTH_p = "32" (parameter)
+Property  63: bp.ocpi_max_opcode_in = "255" (parameter, hidden, worker)
+Property  64: bp.ocpi_max_bytes_in = "65532" (parameter, hidden, worker)
+Property  65: bp.ocpi_max_opcode_out = "255" (parameter, hidden, worker)
+Property  66: bp.ocpi_max_bytes_out = "65532" (parameter, hidden, worker)
+Property  67: bp.ocpi_buffer_size_out = "8192" (cached, hidden, worker)
+Property  68: bp.ocpi_blocked_out = "" (debug, hidden, worker, unreadable)
+Property  69: bp.ocpi_max_latency_out = "256" (parameter, hidden, worker)
+Property  70: bp.ocpi_latency_out = "0" (hidden, worker)
+Property  71: bp.ocpi_messages_out = "" (debug, hidden, worker, unreadable)
+Property  72: bp.ocpi_bytes_out = "" (debug, hidden, worker, unreadable)
+Property  73: file_write.fileName = "case04.00.cacfar.hdl.output.out" (cached)
+Property  74: file_write.messagesInFile = "false" (cached)
+Property  75: file_write.bytesWritten = "0"
+Property  76: file_write.messagesWritten = "0"
+Property  77: file_write.stopOnEOF = "true" (cached)
+Property  78: file_write.ocpi_debug = "false" (parameter, hidden, worker)
+Property  79: file_write.ocpi_endian = "little" (parameter, hidden, worker)
+Property  80: file_write.ocpi_version = "2" (parameter, hidden, worker)
+Property  81: file_write.suppressWrites = "false"
+Property  82: file_write.countData = "false"
+Property  83: file_write.bytesPerSecond = "0"
+Property  84: file_write.ocpi_max_opcode_in = "255" (parameter, hidden, worker)
+Property  85: file_write.ocpi_max_bytes_in = "65532" (parameter, hidden, worker)
+Application started/running [0 s 54 ms]
+Waiting for up to 3600 seconds for application to finish before timeout
+Application finished [2 s 484 ms]
+Dump of all final property values:
+Property   0: file_read.fileName = "../../gen/inputs/case04.00.input" (cached)
+Property   1: file_read.messagesInFile = "true" (cached)
+Property   2: file_read.opcode = "0" (cached)
+Property   3: file_read.messageSize = "0"
+Property   4: file_read.granularity = "1" (cached)
+Property   5: file_read.repeat = "false" (cached)
+Property   6: file_read.bytesRead = "2048"
+Property   7: file_read.messagesWritten = "1"
+Property   8: file_read.suppressEOF = "false" (cached)
+Property   9: file_read.badMessage = "false"
+Property  15: file_read.ocpi_buffer_size_out = "2048" (cached, hidden, worker)
+Property  16: cacfar_ms_input.enable_give_lsfr = "true" (cached)
+Property  17: cacfar_ms_input.enable_take_lsfr = "true" (cached)
+Property  18: cacfar_ms_input.give_duty = "1" (cached)
+Property  19: cacfar_ms_input.take_duty = "1" (cached)
+Property  20: cacfar_ms_input.mode = "full" (cached)
+Property  21: cacfar_ms_input.seed = "1" (cached)
+Property  22: cacfar_ms_input.allow_zlms = "false" (cached)
+Property  23: cacfar_ms_input.insert_nop = "true" (cached)
+Property  32: cacfar_ms_input.ocpi_buffer_size_out = "8192" (cached, hidden, worker)
+Property  33: cacfar_ms_input.ocpi_blocked_out = "" (debug, hidden, worker, unreadable)
+Property  35: cacfar_ms_input.ocpi_latency_out = "1" (hidden, worker)
+Property  36: cacfar_ms_input.ocpi_messages_out = "" (debug, hidden, worker, unreadable)
+Property  37: cacfar_ms_input.ocpi_bytes_out = "" (debug, hidden, worker, unreadable)
+Property  50: cacfar.ocpi_buffer_size_output = "8192" (cached, hidden, worker)
+Property  51: cacfar.ocpi_blocked_output = "" (debug, hidden, worker, unreadable)
+Property  53: cacfar.ocpi_latency_output = "256" (hidden, worker)
+Property  54: cacfar.ocpi_messages_output = "" (debug, hidden, worker, unreadable)
+Property  55: cacfar.ocpi_bytes_output = "" (debug, hidden, worker, unreadable)
+Property  56: bp.enable_select = "true" (cached)
+Property  57: bp.enable_duty_cycle = "1" (cached)
+Property  67: bp.ocpi_buffer_size_out = "8192" (cached, hidden, worker)
+Property  68: bp.ocpi_blocked_out = "" (debug, hidden, worker, unreadable)
+Property  70: bp.ocpi_latency_out = "0" (hidden, worker)
+Property  71: bp.ocpi_messages_out = "" (debug, hidden, worker, unreadable)
+Property  72: bp.ocpi_bytes_out = "" (debug, hidden, worker, unreadable)
+Property  73: file_write.fileName = "case04.00.cacfar.hdl.output.out" (cached)
+Property  74: file_write.messagesInFile = "false" (cached)
+Property  75: file_write.bytesWritten = "2048"
+Property  76: file_write.messagesWritten = "2"
+Property  77: file_write.stopOnEOF = "true" (cached)
+Property  81: file_write.suppressWrites = "false" (cached)
+Property  82: file_write.countData = "false" (cached)
+Property  83: file_write.bytesPerSecond = "42989084"
+Simulator device flushing all session state
+
+real	0m20.943s
+user	0m18.689s
+sys	0m1.508s

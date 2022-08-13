@@ -1,0 +1,44 @@
+<!-- This is the test xml for testing component "CACFAR" -->
+<tests UseHDLFileIo='false'>
+  <input Port="input" script="generate.py" messagesinfile="true" stressormode="full"/>
+  <!-- disableBackpressure="true" -->
+  <output Port="output" Script="verify.py"/>
+
+  <property name="test_case" test="true" type="string"/>
+
+  <!-- Case00: FDW 32 bit values out full of 1's -->
+  <case>
+    <property name="test_case" value="case00"/>
+  </case>
+
+  <!-- Case01: FDW 32 bit values out counting from 0 to FDW -->
+  <case>
+    <property name="test_case" value="case01"/>
+  </case>
+
+  <!-- Case02: FDW 32 bit values coming out from an FFT with noise-->
+  <case>
+    <property name="test_case" value="case02"/>
+  </case>
+
+  <!-- Case03: FDW 32 bit values with a range of 0's but also occasionally
+       some 1's to ensure that peaks are indeed being detected-->
+  <case>
+      <property name="test_case" value="case03"/>
+  </case>
+
+  <!-- Case04: FDW 32 bit values coming out from an FFT without noise-->
+  <case>
+    <property name="test_case" value="case04"/>
+  </case>
+
+  <!-- Case05: FDW 32 bit values coming out from an FFT with noise on boundaries-->
+  <case>
+    <property name="test_case" value="case05"/>
+  </case>
+
+  <!-- Case06: FDW 32 bit values split into 16 bit I/Q-->
+  <case>
+    <property name="test_case" value="case06"/>
+  </case>
+</tests>
