@@ -1,0 +1,7 @@
+<HdlWorker spec='cacfar-spec' Language='vhdl' Version='2'
+  Sourcefiles='ram.vhd cacfar_generator.vhd'>
+
+  <StreamInterface Name ="input"  DataWidth="32"/>
+  <StreamInterface Name ="output" DataWidth="32" workerEOF="true"/>
+
+</HdlWorker>

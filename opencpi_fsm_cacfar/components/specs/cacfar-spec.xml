@@ -1,0 +1,17 @@
+<!-- This is the spec file (OCS) for: CACFAR
+     Add component spec attributes, like "protocol".
+     Add property elements for spec properties.
+     Add port elements for i/o ports -->
+<componentspec>
+  <!-- Add property and port elements here -->
+  <port Name="input"   producer="false" protocol="iqstream_protocol"/>
+  <port Name="output"  producer="true"  protocol="iqstream_protocol"/>
+
+  <property name="SAMPLE_SIZE"        type="ushort" parameter="true" value="512"/>
+  <property name="SAMPLING_FREQUENCY" type="ushort" parameter="true" value="1024"/>
+  <property name="NUM_TRAIN_CELLS"    type="ushort" parameter="true" value="12"/>
+  <property name="NUM_GUARD_CELLS"    type="ushort" parameter="true" value="4"/>
+  <property name="THRESHOLD_FACTOR"   type="ushort" parameter="true" value="5"/>
+    <!-- SAMPLING_FREQUENCY should be twice the size of the SAMPLE_SIZE for Nyquist Criterion -->
+
+</componentspec>

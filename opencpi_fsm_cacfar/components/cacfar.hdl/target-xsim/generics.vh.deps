@@ -1,0 +1,5 @@
+target-xsim//generics.vh: cacfar.xml ../lib/cacfar-spec.xml ../../imports/ocpi.core/exports/specs/iqstream_protocol.xml gen/cacfar-build.xml
+
+../lib/cacfar-spec.xml:
+
+../../imports/ocpi.core/exports/specs/iqstream_protocol.xml:

@@ -1,0 +1,8 @@
+# This generated file records libraries necessary to build this cacfar worker
+# The first line contains the namespace mode: qualified, global, or both
+global
+ocpi.tutorial:prims:prims
+ocpi.core:fixed_float:fixed_float
+ocpi.core:ocpi:ocpi
+ocpi.core:bsv:ocpi_core_bsv
+ocpi.core:cdc:cdc
