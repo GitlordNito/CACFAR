@@ -1,0 +1,5 @@
+<project
+ProjectDependencies='ocpi.assets ocpi.tutorial ocpi.core'
+HdlLibraries='prims'
+ComponentLibraries='util_comps'
+/>

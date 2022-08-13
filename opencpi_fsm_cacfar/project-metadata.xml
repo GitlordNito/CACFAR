@@ -1,0 +1,23 @@
+<project name="local.cacfar">
+  <hdl>
+    <assemblies />
+    <primitives />
+  </hdl>
+  <rcc />
+  <components>
+    <library name="components">
+      <workers>
+        <worker name="cacfar.hdl">
+          <built configID="0" target="xsim" />
+        </worker>
+        <worker name=".Xil" />
+      </workers>
+      <tests>
+        <test name="cacfar.test" />
+      </tests>
+      <specs>
+        <spec name="cacfar-spec.xml" />
+      </specs>
+    </library>
+  </components>
+</project>
