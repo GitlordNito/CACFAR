@@ -1,0 +1,30 @@
+<application done='file_write'>
+  <instance component='ocpi.core.file_read' connect='cacfar_ms_input'>
+    <property name='filename' value='../../gen/inputs/case00.00.input'/>
+    <property name='messagesInFile' value='true'/>
+  </instance>
+  <instance component='ocpi.core.metadata_stressor' name='cacfar_ms_input' connect='cacfar'>
+    <property name='mode' value='full'/>
+    <property name='enable_give_lsfr' value='true'/>
+    <property name='enable_take_lsfr' value='true'/>
+    <property name='insert_nop' value='true'/>
+  </instance>
+  <instance component='local.cacfar.cacfar' name='cacfar' connect='bp'>
+    <property name='SAMPLE_SIZE' value='512'/>
+    <property name='SAMPLING_FREQUENCY' value='1024'/>
+    <property name='NUM_TRAIN_CELLS' value='12'/>
+    <property name='NUM_GUARD_CELLS' value='4'/>
+    <property name='THRESHOLD_FACTOR' value='5'/>
+    <property name='ocpi_debug' value='false'/>
+    <property name='ocpi_endian' value='little'/>
+    <property name='ocpi_version' value='2'/>
+    <property name='ocpi_max_opcode_input' value='0'/>
+    <property name='ocpi_max_bytes_input' value='8192'/>
+    <property name='ocpi_max_opcode_output' value='0'/>
+    <property name='ocpi_max_bytes_output' value='8192'/>
+  </instance>
+  <instance component='ocpi.core.backpressure' name='bp' connect='file_write'>
+    <property name='enable_select' value='true'/>
+  </instance>
+  <instance component='ocpi.core.file_write'/>
+</application>
