@@ -1,0 +1,33 @@
+Fs = 1000;
+Fc = 500;
+
+T = 1/Fs;             % Sampling period       
+L = 1024;             % Length of signal
+t = (0:L-1)*T;        % Time vector
+
+S = sin(2*pi*50*t) + sin(2*pi*120*t);
+X = S + 2*randn(size(t));
+YS = fft(S);
+YX = fft(X);
+
+f = Fs*(0:(L/2))/L;
+
+P2S = abs(YS/L);
+P1S = P2S(1:L/2+1);
+P1S(2:end-1) = 2*P1S(2:end-1);
+
+P2X = abs(YX/L);
+P1X = P2X(1:L/2+1);
+P1X(2:end-1) = 2*P1X(2:end-1);
+
+%My_Cifar(14, 2, P1X, 1e-2, f);
+My_Cifar_LR(14, 2, P1X, 1e-2, f);
+
+[peak_idx, thresh_array] = My_Cifar_LR(14, 2, P1X, 1e-2, f);
+
+ifft_data = ifft(peak_idx);
+
+t_ifft = ((0:(L-1)/2 + 1)*T);
+
+figure(2);
+plot(t_ifft,ifft_data);
