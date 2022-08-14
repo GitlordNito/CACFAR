@@ -1,10 +1,3 @@
--- THIS FILE WAS ORIGINALLY GENERATED ON Mon Apr  4 09:46:05 2022 BST
--- BASED ON THE FILE: CACFAR.xml
--- YOU *ARE* EXPECTED TO EDIT IT
--- This file initially contains the architecture skeleton for worker: CACFAR
-
-----------------------------------------------------------------------------------
-
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
